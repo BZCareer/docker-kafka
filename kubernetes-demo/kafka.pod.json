@@ -1,0 +1,29 @@
+{
+	"apiVersion": "v1",
+	"kind": "Pod",
+	"metadata": {
+		"name": "kafka",
+		"labels": {
+			"name": "kafka-d"
+		}
+	},
+	"spec": {
+		"containers": [{
+			"name": "zookeeper-coordination-service",
+			"image": "docker.io/bzcareer/docker-zookeeper",
+			"ports": [{
+				"containerPort": 2181
+			}, {
+				"containerPort": 2888
+			}, {
+				"containerPort": 3888
+			}]
+		},{
+			"name": "kakfa-messaging-service",
+			"image": "docker.io/bzcareer/docker-kafka",
+			"ports": [{
+				"containerPort": 9092
+			}]
+		}]
+	}
+}
