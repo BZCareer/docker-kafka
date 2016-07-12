@@ -1,4 +1,4 @@
-Apache Zookeeper on Docker
+Apache Kafka on Docker
 ==========
 
 In this repository you will find a docker file which will allow for running apache kakfa inside docker containers or inside kubernetes.
