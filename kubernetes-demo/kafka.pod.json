@@ -4,13 +4,17 @@
 	"metadata": {
 		"name": "kafka",
 		"labels": {
-			"name": "kafka-d"
+			"name": "kafka-node"
 		}
 	},
 	"spec": {
 		"containers": [{
 			"name": "zookeeper-coordination-service",
 			"image": "docker.io/bzcareer/docker-zookeeper",
+			"env": [{
+					"name": "ZK_ID",
+					"value": "1"
+			}],
 			"ports": [{
 				"containerPort": 2181
 			}, {

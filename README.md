@@ -103,6 +103,18 @@ Now using project "cloudcassandra" on server "https://10.2.2.2:8443".
 [ vagrant@localhost] $ oc create -f kafka.service.json
 ```
 
+Or to use template:
+
+```
+oc process -f kafka.template.json MESSAGING_SERVICE_NAME=kafka-node | oc create -f -
+
+```
+Or to install in wizard 'add project':
+```
+oc create -f kafka.template.json KUBE_SERVICE_NAME=kafka-service MESSAGING_SERVICE_NAME=kafka-node | oc create -f
+
+```
+
 
 ## This Example Should Not Be Used In Production
 
